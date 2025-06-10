@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Addition App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%);
+            min-height: 100vh;
+            margin: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+        }
+        .container {
+            background: #fff;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+            border-radius: 16px;
+            max-width: 400px;
+            margin: 60px auto 0 auto;
+            padding: 32px 24px 24px 24px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h2 {
+            color: #2d3a4b;
+            margin-bottom: 24px;
+            font-weight: 600;
+        }
+        form {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        input[type="number"] {
+            width: 80px;
+            padding: 10px;
+            border: 1px solid #bfc9d1;
+            border-radius: 8px;
+            font-size: 1.1em;
+            outline: none;
+            transition: border 0.2s;
+        }
+        input[type="number"]:focus {
+            border: 1.5px solid #74ebd5;
+        }
+        button {
+            background: linear-gradient(90deg, #74ebd5 0%, #ACB6E5 100%);
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 10px 24px;
+            font-size: 1.1em;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
+            transition: background 0.2s, transform 0.1s;
+        }
+        button:hover {
+            background: linear-gradient(90deg, #ACB6E5 0%, #74ebd5 100%);
+            transform: translateY(-2px) scale(1.03);
+        }
+        .result {
+            margin-top: 28px;
+            font-size: 1.2em;
+            color: #1a5d57;
+            background: #e0f7fa;
+            padding: 12px 24px;
+            border-radius: 8px;
+            box-shadow: 0 1px 4px rgba(44, 62, 80, 0.06);
+        }
+        .footer {
+            margin-top: auto;
+            background: #2d3a4b;
+            color: #fff;
+            text-align: center;
+            padding: 18px 0 12px 0;
+            font-size: 1em;
+            letter-spacing: 1px;
+            border-top-left-radius: 16px;
+            border-top-right-radius: 16px;
+            box-shadow: 0 -2px 12px rgba(44, 62, 80, 0.08);
+        }
+        @media (max-width: 500px) {
+            .container {
+                max-width: 95vw;
+                padding: 18px 6vw 18px 6vw;
+            }
+            .footer {
+                font-size: 0.95em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Simple Addition App</h2>
+        <form method="post">
+            <input id="lets_change_this_locator" name="num1" type="number" placeholder="First number" required>
+            <span style="font-size:1.5em;color:#74ebd5;font-weight:600;">+</span>
+            <input id="num2" name="num2" type="number" placeholder="Second number" required>
+            <button id="add-btn" type="submit">Add</button>
+        </form>
+        {% if result is not none %}
+            <div class="result" id="result">Result: {{ result }}</div>
+        {% endif %}
+    </div>
+    <div class="footer">
+        Reserved by @Mahesh Gachale
+    </div>
+</body>
+</html> 
