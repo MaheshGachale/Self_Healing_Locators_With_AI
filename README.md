@@ -49,3 +49,5 @@ Playwrite_pytest/
 ---
 
 **Note:** The AI locator fixer is a template and requires integration with Gemini or another LLM for real AI-powered locator suggestions. 
+
+Demo Video : https://drive.google.com/file/d/1WukeMdTAeFWJdqgWRDeKeN-t9x_IyR1m/view?usp=drive_link
